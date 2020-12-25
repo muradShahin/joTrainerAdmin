@@ -1,0 +1,4 @@
+
+pkotlin:S117-"MRename this parameter to match the regular expression "^[_a-z][a-zA-Z0-9]*$".(¥Άςΰόÿÿÿÿ8€Κα.
+skotlin:S100)"URename function "getLessons_left" to match the regular expression ^[a-z][a-zA-Z0-9]*$(Τ«ΥΦ8€Κα.
+xkotlin:S100-"URename function "setLessons_left" to match the regular expression ^[a-z][a-zA-Z0-9]*$(¥Άςΰόÿÿÿÿ8€Κα.

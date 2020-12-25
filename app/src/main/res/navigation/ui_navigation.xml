@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ui_navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.murad.jotraineradmin.Home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_trainerDetails"
+            app:destination="@id/trainerDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/trainerDetails"
+        android:name="com.murad.jotraineradmin.TrainerDetails.TrainerDetails"
+        android:label="fragment_trainer_details"
+        tools:layout="@layout/fragment_trainer_details" >
+        <argument
+            android:name="trainer"
+            app:argType="com.murad.jotraineradmin.Enities.Trainers" />
+        <action
+            android:id="@+id/action_trainerDetails_to_teacher_Students"
+            app:destination="@id/teacher_Students" />
+    </fragment>
+    <fragment
+        android:id="@+id/teacher_Students"
+        android:name="com.murad.jotraineradmin.TrainerDetails.Teacher_Students"
+        android:label="fragment_teacher__students"
+        tools:layout="@layout/fragment_teacher__students" >
+        <argument
+            android:name="trainees"
+            app:argType="com.murad.jotraineradmin.Enities.Trainees[]" />
+        <action
+            android:id="@+id/action_teacher_Students_to_traineeDetails"
+            app:destination="@id/traineeDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/traineeDetails"
+        android:name="com.murad.jotraineradmin.TrainerDetails.TraineeDetails"
+        android:label="fragment_trainee_details"
+        tools:layout="@layout/fragment_trainee_details" >
+        <argument
+            android:name="trainee"
+            app:argType="com.murad.jotraineradmin.Enities.Trainees" />
+    </fragment>
+</navigation>
