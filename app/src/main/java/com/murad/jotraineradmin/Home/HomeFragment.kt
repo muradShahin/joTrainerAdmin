@@ -79,6 +79,11 @@ class HomeFragment : Fragment() {
 
         })
 
+        view.floatingActionButton.setOnClickListener {
+
+            view.findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToStatistcsHome())
+        }
+
 
 
 

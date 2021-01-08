@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_homeFragment_to_trainerDetails"
             app:destination="@id/trainerDetails" />
+        <action
+            android:id="@+id/action_homeFragment_to_statistcsHome"
+            app:destination="@id/statistcsHome" />
     </fragment>
     <fragment
         android:id="@+id/trainerDetails"
@@ -47,4 +50,34 @@
             android:name="trainee"
             app:argType="com.murad.jotraineradmin.Enities.Trainees" />
     </fragment>
+    <fragment
+        android:id="@+id/statics"
+        android:name="com.murad.jotraineradmin.statistics.Statics"
+        android:label="fragment_statics"
+        tools:layout="@layout/fragment_statics" />
+    <fragment
+        android:id="@+id/statistcsHome"
+        android:name="com.murad.jotraineradmin.statistics.StatistcsHome"
+        android:label="fragment_statistcs_home"
+        tools:layout="@layout/fragment_statistcs_home" >
+        <action
+            android:id="@+id/action_statistcsHome_to_statics"
+            app:destination="@id/statics" />
+        <action
+            android:id="@+id/action_statistcsHome_to_genderStatisics"
+            app:destination="@id/genderStatisics" />
+        <action
+            android:id="@+id/action_statistcsHome_to_traineesGender"
+            app:destination="@id/traineesGender" />
+    </fragment>
+    <fragment
+        android:id="@+id/genderStatisics"
+        android:name="com.murad.jotraineradmin.statistics.GenderStatisics"
+        android:label="fragment_gender_statisics"
+        tools:layout="@layout/fragment_gender_statisics" />
+    <fragment
+        android:id="@+id/traineesGender"
+        android:name="com.murad.jotraineradmin.statistics.TraineesGender"
+        android:label="fragment_trainees_gender"
+        tools:layout="@layout/fragment_trainees_gender" />
 </navigation>

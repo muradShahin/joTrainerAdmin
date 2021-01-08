@@ -19,6 +19,7 @@ class Trainers() :Parcelable{
     private var phone: String? = null
     private var city: String? = null
     private var isApproved:String?=null
+    private var certificate:String?=null
 
 
 
@@ -191,6 +192,15 @@ class Trainers() :Parcelable{
 
     fun getIsApproved():String?{
        return this.isApproved
+    }
+
+    fun setCertificate(cert:String){
+        this.certificate=cert
+    }
+
+    fun getCertificate():String{
+
+        return this.certificate!!
     }
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {

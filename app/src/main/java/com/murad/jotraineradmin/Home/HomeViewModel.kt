@@ -208,6 +208,8 @@ open class HomeViewModel(val context: Context) {
                     val isApproved = x.getString("isApproved")
                     val lat = x.getString("lat")
                     val lng = x.getString("lng")
+                    val certificate=x.getString("certificate")
+
 
 
                     val trainer = Trainers()
@@ -226,6 +228,7 @@ open class HomeViewModel(val context: Context) {
                     trainer.setPhone(phone)
                     trainer.setId(id)
                     trainer.setIsApproved(isApproved)
+                    trainer.setCertificate(certificate)
 
                     trainerList.add(trainer)
 

@@ -26,6 +26,7 @@ import com.murad.jotraineradmin.Enities.Trainees
 import com.murad.jotraineradmin.Enities.Trainers
 import com.murad.jotraineradmin.R
 import kotlinx.android.synthetic.main.car_details_dialog.*
+import kotlinx.android.synthetic.main.certificate.*
 import kotlinx.android.synthetic.main.fragment_trainer_details.view.*
 import java.util.*
 import kotlin.collections.ArrayList
@@ -123,6 +124,10 @@ class TrainerDetails : Fragment()  {
             composeEmail()
         }
 
+        view.certCard.setOnClickListener {
+            showCertificate()
+        }
+
 
 
 
@@ -133,6 +138,27 @@ class TrainerDetails : Fragment()  {
         view.studentsCard.setOnClickListener {
           view.findNavController().navigate(TrainerDetailsDirections.actionTrainerDetailsToTeacherStudents(listOfTrainees))
         }
+
+
+    }
+
+    private fun showCertificate() {
+        val dialog=Dialog(requireContext())
+        dialog.setContentView(R.layout.certificate)
+
+        if(trainer.getCertificate() !=null) {
+            Glide.with(requireActivity())
+                .load(trainer.getCertificate())
+                .into(dialog.certImage)
+        }else
+            Toast.makeText(requireContext(),"No Certification Found !",Toast.LENGTH_LONG).show()
+
+
+        dialog.window?.setBackgroundDrawableResource(R.color.transperant)
+
+        dialog.show()
+
+
 
 
     }

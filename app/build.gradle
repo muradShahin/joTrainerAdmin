@@ -11,7 +11,7 @@ android {
 
     defaultConfig {
         applicationId "com.murad.jotraineradmin"
-        minSdkVersion 16
+        minSdkVersion 19
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -73,4 +73,6 @@ dependencies {
     kapt "com.google.dagger:dagger-android-processor:$daggerVer"
     kapt "com.google.dagger:dagger-compiler:$daggerVer"
 
+    //statics
+    implementation 'com.github.AAChartModel:AAChartCore-Kotlin:-SNAPSHOT'
 }

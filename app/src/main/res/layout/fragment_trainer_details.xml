@@ -90,13 +90,12 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardView5"
         android:layout_width="0dp"
         android:layout_height="@dimen/_180sdp"
         android:layout_marginStart="@dimen/_20sdp"
-        android:layout_marginLeft="@dimen/_20sdp"
         android:layout_marginTop="@dimen/_10sdp"
         android:layout_marginEnd="@dimen/_20sdp"
-        android:layout_marginRight="@dimen/_20sdp"
         app:cardCornerRadius="@dimen/_8sdp"
         app:cardElevation="@dimen/_4sdp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -350,6 +349,26 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/_4sdp"
             android:src="@drawable/student" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/certCard"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginTop="@dimen/_170sdp"
+        app:cardCornerRadius="@dimen/_20sdp"
+        app:cardElevation="@dimen/_6sdp"
+        app:layout_constraintEnd_toStartOf="@+id/showCarBtn"
+        app:layout_constraintStart_toEndOf="@+id/studentsCard"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <ImageView
+            android:id="@+id/imageView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:padding="@dimen/_4sdp"
+            android:src="@drawable/ic_certificate" />
     </androidx.cardview.widget.CardView>
 
 
